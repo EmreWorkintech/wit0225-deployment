@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Link, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { useState } from "react";
+import { Link, Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 
-import './App.css';
-import Form from './components/Form';
-import Header from './components/Header';
+import "./App.css";
+import Form from "./components/Form";
+import Header from "./components/Header";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Link to="/login">Login</Link>
+          <Link to="/login">Please login first!</Link>
         </Route>
         <Route exact path="/login">
           <Form />
