@@ -1,13 +1,13 @@
-import { useContext } from 'react';
-import { UserContext } from '../contexts/UserContext';
-import axios from 'axios';
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
+import axios from "axios";
 
 export default function Form() {
   const { logIn } = useContext(UserContext);
 
   function handleSubmit() {
     axios
-      .post('https://reqres.in/api/users', { email: 'emre@wit.com' })
+      .post("https://reqres.in/api/users", { email: "emre@wit.com" })
       .then((response) => {
         logIn(response.data);
       })
@@ -27,7 +27,7 @@ export default function Form() {
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
             alt="logo"
           />
-          Flowbite
+          {import.meta.env.VITE_COHORT_NAME}
         </a>
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -102,7 +102,7 @@ export default function Form() {
                 Sign in
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Don’t have an account yet?{' '}
+                Don’t have an account yet?{" "}
                 <a
                   href="#"
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
